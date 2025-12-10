@@ -3,6 +3,7 @@ TTS==0.22.0
 gradio==4.44.0
 torch==2.4.1
 torchaudio==2.4.1
+transformers==4.40.0
 scipy
 soundfile
 pydub
