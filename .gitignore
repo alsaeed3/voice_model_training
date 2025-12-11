@@ -205,3 +205,35 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ============================================
+# Project-specific ignores
+# ============================================
+
+# Large model files (users must download their own)
+models/*.gguf
+models/*.bin
+models/*.safetensors
+models/*Zone.Identifier
+
+# Generated audio output
+output/*.wav
+output/*.mp3
+output/*.ogg
+output_cloned.wav
+
+# Temporary audio files
+temp_audio/*.wav
+temp_audio/*.mp3
+
+# User profile data (contains personal voice data)
+data/profiles/*/
+
+# Gradio cache
+.gradio/
+
+# Keep directory structure with .gitkeep
+!models/.gitkeep
+!output/.gitkeep
+!temp_audio/.gitkeep
+!data/profiles/.gitkeep

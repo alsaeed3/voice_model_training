@@ -1,0 +1,3 @@
+# This file allows the directory to be tracked by git
+# Download your own GGUF model from HuggingFace
+# Example: https://huggingface.co/QuantFactory/Meta-Llama-3-8B-Instruct-GGUF

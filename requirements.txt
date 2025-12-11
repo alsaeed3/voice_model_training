@@ -1,12 +1,41 @@
+# ============================================
+# Digital Human Clone Dashboard - Requirements
+# ============================================
+# Installation order matters due to numpy conflicts
+# Use setup.sh for proper installation order
+
+# --- PyTorch with CUDA 12.4 support ---
 --extra-index-url https://download.pytorch.org/whl/cu124
-TTS==0.22.0
-gradio==4.44.0
 torch==2.4.1
 torchaudio==2.4.1
-transformers==4.40.0
-scipy
-soundfile
+
+# --- Core TTS (Mouth) ---
+TTS==0.22.0
+
+# --- Whisper Transcription (Ear) ---
+faster-whisper==1.0.3
+
+# --- ChromaDB for Vector Storage (Brain) ---
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+
+# --- LLM (Brain) ---
+# Note: llama-cpp-python requires special build flags for CUDA
+# Install with: pip install llama-cpp-python --no-binary llama-cpp-python
+# With env vars: CMAKE_ARGS="-DGGML_CUDA=on" FORCE_CMAKE=1
+llama-cpp-python==0.3.2
+
+# --- Audio Processing ---
 pydub
 ffmpeg-python
-numpy<2.0.0
+soundfile
+scipy
 
+# --- NLP & Utilities ---
+transformers>=4.40.0
+
+# --- UI Framework ---
+gradio>=4.40.0
+
+# --- Data Validation ---
+pydantic>=2.0.0

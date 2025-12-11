@@ -1,0 +1,20 @@
+# ============================================
+# Additional Requirements (Install AFTER main requirements.txt)
+# ============================================
+# These packages require numpy>=1.22.5, so we install them
+# after TTS with --ignore-installed to override TTS's numpy pin
+
+# --- Transcription (Ear) ---
+faster-whisper>=1.0.0
+
+# --- LLM Brain (Llama 3 via llama.cpp) ---
+llama-cpp-python>=0.2.80
+
+# --- Vector Store (Brain Memory) ---
+chromadb>=0.5.0
+
+# --- Sentence Embeddings for ChromaDB ---
+sentence-transformers>=3.0.0
+
+# --- Upgrade numpy for compatibility ---
+numpy>=1.24.0,<2.0.0

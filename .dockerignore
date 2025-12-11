@@ -1,0 +1,73 @@
+# ============================================
+# Docker Ignore File
+# ============================================
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution
+build/
+dist/
+*.egg-info/
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+
+# Gradio cache
+.gradio/
+
+# Local development files
+*.log
+*.local
+
+# Temp files
+temp_audio/
+*.tmp
+
+# Test files
+tests/
+test_*.py
+*_test.py
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Large model files (mounted via docker-compose)
+models/*.gguf
+models/*.bin
+
+# Output files (mounted via docker-compose)
+output/*.wav
+output/*.mp3
+
+# Data (mounted via docker-compose)
+data/profiles/*/
+
+# Misc
+.DS_Store
+Thumbs.db
+*.bak
+
+# Broken pip files (cleanup)
+=*
